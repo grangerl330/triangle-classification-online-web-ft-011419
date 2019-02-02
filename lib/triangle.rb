@@ -22,8 +22,5 @@ class Triangle
   class TriangleError < StandardError 
     "No side can be less than a length of 1 AND two sides added together must always be greater than the third side"
   end 
-      
-
-      
   
 end

@@ -12,7 +12,12 @@ class Triangle
         raise TriangleError
     elsif side_1 == side_2 && side_2 == side_3  
       :equilateral
-    elsif 
+    elsif side_1 == side_2 || side_2 == side_3 || side_1 == side_3
+      :isosceles
+    else 
+      :scalene
+    end 
+  end 
   
   class TriangleError < StandardError 
     "No side can be less than a length of 1 AND two sides added together must always be greater than the third side"

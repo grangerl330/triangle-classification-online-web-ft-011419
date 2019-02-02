@@ -10,7 +10,9 @@ class Triangle
   def kind 
     if side_1 <= 0 || side_2 <= 0 || side_3 <= 0 || side_1 + side_2 <= side_3 || side_2 + side_3 <= side_1 || side_1 + side_3 <= side_2
         raise TriangleError
-    elsif side_1 == side_2 
+    elsif side_1 == side_2 && side_2 == side_3  
+      :equilateral
+    elsif 
   
   class TriangleError < StandardError 
     "No side can be less than a length of 1 AND two sides added together must always be greater than the third side"
